@@ -2,29 +2,27 @@ package com.project.douglasapi.controller;
 
 import com.project.douglasapi.dto.MessageResponseDTO;
 import com.project.douglasapi.entity.Friends;
-import com.project.douglasapi.repository.FriendsRepository;
+import com.project.douglasapi.service.FriendsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 @RequestMapping("/api/v1/friends") //@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class DouglasController {
 
-    private FriendsRepository friendsRepository;
+    private FriendsService friendsService;
 
     @Autowired
-    public DouglasController(FriendsRepository friendsRepository) {
-        this.friendsRepository = friendsRepository;
+    public DouglasController(FriendsService friendsService) {
+        this.friendsService = friendsService;
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public MessageResponseDTO createFriend(@RequestBody Friends friends){
-       Friends savedFriend =  friendsRepository.save(friends);
-        return MessageResponseDTO.builder().message("Created Friend with id " + savedFriend.getId()).build();
+        return friendsService.createFriend(friends);
     }
 
 }

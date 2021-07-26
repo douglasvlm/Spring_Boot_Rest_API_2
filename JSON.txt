@@ -1,0 +1,11 @@
+{
+    "firstName": "Douglas",
+    "lastName": "Martin",
+    "cpf": "123.123.123-12",
+    "phone": [
+        {
+        "type": "MOBILE",
+        "number": "(11)11111111"
+        }
+    ]
+}
