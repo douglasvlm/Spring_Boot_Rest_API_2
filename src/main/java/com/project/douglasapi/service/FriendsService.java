@@ -6,22 +6,19 @@ import com.project.douglasapi.entity.Friends;
 import com.project.douglasapi.exception.FriendsNotFoundException;
 import com.project.douglasapi.mapper.FriendsMapper;
 import com.project.douglasapi.repository.FriendsRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class FriendsService {
 
     private FriendsRepository friendsRepository;
 
     private final FriendsMapper friendsMapper = FriendsMapper.INSTANCE;
-
-    @Autowired
-    public FriendsService(FriendsRepository friendsRepository) {
-        this.friendsRepository = friendsRepository;
-    }
 
     public MessageResponseDTO createFriend(FriendsDTO friendsDTO){
         Friends friendsToSave = friendsMapper.toModel(friendsDTO);

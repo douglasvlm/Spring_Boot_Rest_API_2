@@ -5,6 +5,7 @@ import com.project.douglasapi.dto.response.MessageResponseDTO;
 import com.project.douglasapi.entity.Friends;
 import com.project.douglasapi.exception.FriendsNotFoundException;
 import com.project.douglasapi.service.FriendsService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -13,15 +14,11 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/v1/friends") //@AllArgsConstructor(onConstructor = @__(@Autowired))
+@RequestMapping("/api/v1/friends")
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class DouglasController {
 
     private FriendsService friendsService;
-
-    @Autowired
-    public DouglasController(FriendsService friendsService) {
-        this.friendsService = friendsService;
-    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
