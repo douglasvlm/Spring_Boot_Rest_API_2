@@ -39,12 +39,17 @@ public class DouglasController {
         return friendsService.findById(id);
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteById(@PathVariable Long id) throws FriendsNotFoundException {
+        friendsService.delete(id);
+    }
 }
 
 
 
 
-  /*  private PersonService personService;
+  /*
 
 
     @GetMapping("/{id}")

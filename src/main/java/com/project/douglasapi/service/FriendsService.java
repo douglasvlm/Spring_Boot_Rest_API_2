@@ -44,8 +44,18 @@ public class FriendsService {
     }
 
     public FriendsDTO findById(Long id) throws FriendsNotFoundException {
-        Friends friends = friendsRepository.findById(id).orElseThrow(() -> new FriendsNotFoundException(id));
+        Friends friends = verifyIfExists(id);
         return friendsMapper.toDTO(friends);
         //Optional<Friends> optionalFriends = friendsRepository.findById(id);  // if(optionalFriends.isEmpty()){  //   throw new FriendsNotFoundException(id);  //} return friendsMapper.toDTO(optionalFriends.get());
+    }
+
+    public void delete(Long id) throws FriendsNotFoundException {
+        verifyIfExists(id);
+        friendsRepository.deleteById(id);
+    }
+
+    private Friends verifyIfExists (Long id) throws FriendsNotFoundException{
+        return friendsRepository.findById(id).orElseThrow(() -> new FriendsNotFoundException(id));
+
     }
 }
