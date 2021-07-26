@@ -14,7 +14,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class FriendsDTO {
+public class ClientsDTO {
 
         private Long id;
 
