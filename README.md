@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Para executar o projeto no terminal, digite o seguinte comando:
 
 ```shell script
@@ -19,8 +19,6 @@ Após executar o projeto, basta apenas abrir o seguinte endereço:
 ```
 http://localhost:8080/api/v1/clients
 ```
-<<<<<<< HEAD
-
 Abaixo, seguem links utilizados:
 =======
 Abaixo, seguem links sobre tópicos relacionados:
