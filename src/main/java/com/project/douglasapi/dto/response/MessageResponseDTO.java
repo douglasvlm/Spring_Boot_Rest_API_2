@@ -1,4 +1,4 @@
-package com.project.douglasapi.dto;
+package com.project.douglasapi.dto.response;
 
 import lombok.Builder;
 import lombok.Data;
