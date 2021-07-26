@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
+import java.util.List;
 
 
 @RestController
@@ -25,6 +26,11 @@ public class DouglasController {
     @ResponseStatus(HttpStatus.CREATED)
     public MessageResponseDTO createFriend(@RequestBody @Valid FriendsDTO friendsDTO){
         return friendsService.createFriend(friendsDTO);
+    }
+
+    @GetMapping
+    public List<FriendsDTO> listAll() {
+        return friendsService.listAll();
     }
 
 }

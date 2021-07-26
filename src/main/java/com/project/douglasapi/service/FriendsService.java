@@ -8,6 +8,9 @@ import com.project.douglasapi.repository.FriendsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class FriendsService {
 
@@ -29,5 +32,12 @@ public class FriendsService {
                 .builder()
                 .message("Created Friend with id " + savedFriend.getId())
                 .build();
+    }
+
+    public List<FriendsDTO> listAll() {
+        List<Friends> allFriends = friendsRepository.findAll();
+        return allFriends.stream()
+                .map(friendsMapper::toDTO)
+                .collect(Collectors.toList());
     }
 }
