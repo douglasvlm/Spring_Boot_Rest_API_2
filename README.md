@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Para executar o projeto no terminal, digite o seguinte comando:
 
 ```shell script
@@ -15,18 +15,13 @@ Após executar o comando acima, basta apenas abrir o seguinte endereço e visual
 * Implantação do sistema na nuvem através do Heroku
 
 Após executar o projeto, basta apenas abrir o seguinte endereço:
->>>>>>> 1c3aebedf86995e491b48c242b515bfe3f996e82
 
 ```
 http://localhost:8080/api/v1/clients
 ```
-<<<<<<< HEAD
-
 Abaixo, seguem links utilizados:
 =======
 Abaixo, seguem links sobre tópicos relacionados:
->>>>>>> 1c3aebedf86995e491b48c242b515bfe3f996e82
-
 * [SDKMan! para gerenciamento e instalação do Java e Maven](https://sdkman.io/)
 * [Referência do Intellij IDEA Community, para download](https://www.jetbrains.com/idea/download)
 * [Palheta de atalhos de comandos do Intellij](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
