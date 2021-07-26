@@ -8,9 +8,7 @@ import com.project.douglasapi.mapper.FriendsMapper;
 import com.project.douglasapi.repository.FriendsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -27,13 +25,8 @@ public class FriendsService {
 
     public MessageResponseDTO createFriend(FriendsDTO friendsDTO){
         Friends friendsToSave = friendsMapper.toModel(friendsDTO);
-
         Friends savedFriend = friendsRepository.save(friendsToSave);
-
-        return MessageResponseDTO
-                .builder()
-                .message("Created Friend with id " + savedFriend.getId())
-                .build();
+        return createMessageResponse(savedFriend.getId(), "Created Friend with id ");
     }
 
     public List<FriendsDTO> listAll() {
@@ -54,8 +47,22 @@ public class FriendsService {
         friendsRepository.deleteById(id);
     }
 
+     public MessageResponseDTO updateById(Long id, FriendsDTO friendsDTO) throws FriendsNotFoundException {
+        verifyIfExists(id);
+        Friends friendsToUpdate = friendsMapper.toModel(friendsDTO);
+        Friends updateFriend = friendsRepository.save(friendsToUpdate);
+        return createMessageResponse(updateFriend.getId(), "Updated Friend with id ");
+    }
+
     private Friends verifyIfExists (Long id) throws FriendsNotFoundException{
         return friendsRepository.findById(id).orElseThrow(() -> new FriendsNotFoundException(id));
 
+    }
+
+    private MessageResponseDTO createMessageResponse(Long id, String message) {
+        return MessageResponseDTO
+                .builder()
+                .message(message + id)
+                .build();
     }
 }
