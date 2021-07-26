@@ -3,6 +3,7 @@ package com.project.douglasapi.controller;
 import com.project.douglasapi.dto.request.FriendsDTO;
 import com.project.douglasapi.dto.response.MessageResponseDTO;
 import com.project.douglasapi.entity.Friends;
+import com.project.douglasapi.exception.FriendsNotFoundException;
 import com.project.douglasapi.service.FriendsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,6 +34,11 @@ public class DouglasController {
         return friendsService.listAll();
     }
 
+    @GetMapping("/{id}")
+    public FriendsDTO findById(@PathVariable Long id) throws FriendsNotFoundException {
+        return friendsService.findById(id);
+    }
+
 }
 
 
@@ -40,16 +46,6 @@ public class DouglasController {
 
   /*  private PersonService personService;
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public MessageResponseDTO createPerson(@RequestBody @Valid PersonDTO personDTO) {
-        return personService.createPerson(personDTO);
-    }
-
-    @GetMapping
-    public List<PersonDTO> listAll() {
-        return personService.listAll();
-    }
 
     @GetMapping("/{id}")
     public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
