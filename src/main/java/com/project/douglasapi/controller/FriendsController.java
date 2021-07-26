@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/friends")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
-public class DouglasController {
+public class FriendsController {
 
     private FriendsService friendsService;
 

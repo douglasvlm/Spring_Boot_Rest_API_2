@@ -62,4 +62,5 @@ public class FriendsService {
                 .message(message + id)
                 .build();
     }
+
 }
