@@ -44,25 +44,8 @@ public class DouglasController {
     public void deleteById(@PathVariable Long id) throws FriendsNotFoundException {
         friendsService.delete(id);
     }
-}
-
-
-
-
-  /*
-
-
-    @GetMapping("/{id}")
-    public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
-        return personService.findById(id);
-    }
-
     @PutMapping("/{id}")
-    public MessageResponseDTO updateById(@PathVariable Long id, @RequestBody @Valid PersonDTO personDTO) throws PersonNotFoundException {
-        return personService.updateById(id, personDTO);
+    public MessageResponseDTO updateById(@PathVariable Long id, @RequestBody @Valid FriendsDTO friendsDTO) throws FriendsNotFoundException {
+        return friendsService.updateById(id, friendsDTO);
     }
-
-    @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteById(@PathVariable Long id) throws PersonNotFoundException {
-        personService.delete(id);*/
+}
