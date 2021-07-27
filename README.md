@@ -1,6 +1,9 @@
 
 Teste My API
+<<<<<<< HEAD
 https://douglasapi.herokuapp.com/swagger-ui.html
+=======
+>>>>>>> f73c3e94859b386eaa7f28221c5108ad2569152f
 https://douglasapi.herokuapp.com/api/v1/clients
 
 ``` JSON
