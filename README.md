@@ -21,7 +21,7 @@ http://localhost:8080/api/v1/clients
 
 <hr/>
 
-Abaixo, seguem links utilizados:
+### Abaixo, seguem links utilizados:
 =======
 Abaixo, seguem links sobre tópicos relacionados:
 * [SDKMan! para gerenciamento e instalação do Java e Maven](https://sdkman.io/)
