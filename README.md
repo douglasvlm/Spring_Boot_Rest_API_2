@@ -7,9 +7,9 @@
     <a href="https://start.spring.io/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="140" height="140"/> </a>
     <a href="https://heroku.com" target="_blank"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="140" height="140"/> </a>  <hr/>     
 
-    <h3>Este repositório é meu projeto do Bootcamp Java da Digital Innovation One.</h3>
-    <a href="https://digitalinnovation.one/sign-in"><img src="https://hermes.digitalinnovation.one/site/images/logo-footer.png" width="450" height="150"></a>
-    <i>Desenvolvimento de aplicações com Java</i>
+<h3>Este repositório é meu projeto do Bootcamp Java da Digital Innovation One.</h3>
+<a href="https://digitalinnovation.one/sign-in"><img src="https://hermes.digitalinnovation.one/site/images/logo-footer.png" width="450" height="150"></a>
+<i>Desenvolvimento de aplicações com Java</i>
 </div>
 <hr/>
 
