@@ -10,7 +10,7 @@
 <h3>Este repositório é meu projeto do Bootcamp Java da Digital Innovation One.</h3>
 <a href="https://digitalinnovation.one/sign-in"><img src="https://hermes.digitalinnovation.one/site/images/logo-footer.png" width="450" height="150"></a>
 <i>Desenvolvimento de aplicações com Java</i>
-</div>
+
 <hr/>
 
 https://douglasapi.herokuapp.com/swagger-ui.html
@@ -18,12 +18,10 @@ https://douglasapi.herokuapp.com/swagger-ui.html
 https://douglasapi.herokuapp.com/api/v1/clients
 
 http://localhost:8080/api/v1/clients
-
+</div>
 <hr/>
 
-### Abaixo, seguem links utilizados:
-=======
-Abaixo, seguem links sobre tópicos relacionados:
+### Abaixo, seguem links sobre tópicos relacionados:
 * [SDKMan! para gerenciamento e instalação do Java e Maven](https://sdkman.io/)
 * [Referência do Intellij IDEA Community, para download](https://www.jetbrains.com/idea/download)
 * [Palheta de atalhos de comandos do Intellij](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
@@ -33,3 +31,4 @@ Abaixo, seguem links sobre tópicos relacionados:
 * [Documentação oficial do Lombok](https://projectlombok.org/)
 * [Documentação oficial do Map Struct](https://mapstruct.org/)
 * [Referência para o padrão arquitetural REST](https://restfulapi.net/)
+
